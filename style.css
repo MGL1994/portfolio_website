@@ -17,11 +17,46 @@ nav {
     margin: 60px;
 }
 
-nav div {
+.even {
     width: 60px;
     height: 10px;
     background-color: black;
-    margin: 10px 0;
+    transition: 0.4s;
+}
+
+.odd {
+    width: 10px;
+    height: 10px;
+    background-color: #f7f7f7;
+    margin-left: 50px;
+    transition: 0.4s;
+}
+
+.open #navOne {
+    transform: translate(0, 35px) scaleY(6);
+    background-color: black;
+}
+
+.open #navTwo {
+    transform: translate(0, 50px)
+}
+
+.open #navThree {
+    transform: translate(-50px, 75px) scaleY(6);
+    background-color: black;
+}
+
+.open #navFour {
+    transform: translate(-50px, 90px)
+}
+
+.open #navFive {
+    transform: translate(-100px, 115px) scaleY(6);
+    background-color: black;
+}
+
+.open #navSix {
+    transform: translate(-100px, 130px)
 }
 
 #hero {

@@ -1,12 +1,15 @@
 const nav = document.querySelector('nav');
+const navOne = document.querySelector('#navOne')
+const navTwo = document.querySelector('#navTwo')
+const navThree = document.querySelector('#navThree')
 
 nav.addEventListener('mouseenter', expandBurgerMenu);
 nav.addEventListener('mouseleave', collapseBurgerMenu);
 
 function expandBurgerMenu(e) {
-    e.target.style.backgroundColor = 'blue';
+    nav.classList.add('open')
 }
 
 function collapseBurgerMenu(e) {
-    e.target.style.backgroundColor = 'white';
+    nav.classList.remove('open')
 }
