@@ -192,6 +192,22 @@ img {
     transform: rotate(180deg);
 }
 
+.largeTriangleSolid {
+    width: 0; 
+    height: 0; 
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-top: 90px solid #f7f7f7;
+    position: absolute;
+    top: 635px;
+    transition: 0.4s;
+  }
+
+.show div {
+    top: 600px;
+    border-top: 90px solid #FEFA65
+}
+
 i {
     font-size: 100px;
     margin: 10px 20px;
