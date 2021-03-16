@@ -18,6 +18,7 @@ largeTriangleHollow.addEventListener('mouseleave', hideLargeTriangleSolid)
 socialLogos.forEach(logo => {
     logo.addEventListener('mouseenter', showLogoShadow)
     logo.addEventListener('mouseleave', hideLogoShadow)
+    logo.addEventListener('click', openLink)
 })
 
 function expandBurgerMenu(e) {
@@ -48,4 +49,19 @@ function hideLogoShadow(e) {
     const logo = target[0]
     const shadow = document.querySelector(`#${logo}Shadow`)
     shadow.classList.remove('show')
+}
+
+function openLink(e) {
+    const target = e.target.id.split('L')
+    const logo = target[0]
+    switch(logo) {
+        case 'github':
+            window.open("https://github.com/MGL1994")
+            break;
+        case 'linkedin':
+            window.open("https://www.linkedin.com/in/michael-g-laird/")
+            break;
+        case 'envelope':
+            window.open("mailto:michaelgl1994@gmail.com")
+    }
 }
