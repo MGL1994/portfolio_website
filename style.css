@@ -204,11 +204,59 @@ img {
   }
 
 .show div {
-    top: 600px;
+    top: 670px;
     border-top: 90px solid #FEFA65
+}
+
+#socialsGroup {
+    display: flex;
+    align-items: center;
 }
 
 i {
     font-size: 100px;
     margin: 10px 20px;
+    z-index: 2;
+}
+
+#socialsGroup div {
+    height: 88px;
+    width: 88px;
+    background-color: #f7f7f7;
+    position: absolute;
+    z-index: 1;
+    transition: 0.4s;
+}
+
+#githubShadow {
+    top: 635px;
+    right: 475px;
+}
+
+#linkedinShadow {
+    top: 635px;
+    right: 347px;
+}
+
+#envelopeShadow {
+    top: 635px;
+    right: 220px;
+}
+
+.show#githubShadow {
+    top: 600px;
+    right: 450px;
+    background-color: #FB4337;
+}
+
+.show#linkedinShadow {
+    top: 600px;
+    right: 320px;
+    background-color: #FB4337;
+}
+
+.show#envelopeShadow {
+    top: 600px;
+    right: 190px;
+    background-color: #FB4337;
 }
