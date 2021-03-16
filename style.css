@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
 body {
     box-sizing: border-box;
     background: url('./OMEGGK0.jpg') #70cdc3;
@@ -12,9 +14,10 @@ section {
     flex-direction: column;
 }
 
-nav {
+#navigationGroup {
     align-self: flex-end;
     margin: 60px;
+    display: flex;
 }
 
 .even {
@@ -22,6 +25,8 @@ nav {
     height: 10px;
     background-color: black;
     transition: 0.4s;
+    position: relative;
+    z-index: 2;
 }
 
 .odd {
@@ -30,6 +35,17 @@ nav {
     background-color: #f7f7f7;
     margin-left: 50px;
     transition: 0.4s;
+    position: relative;
+    z-index: 2;
+}
+
+.shadow {
+    width: 60px;
+    height: 10px;
+    background-color: #f7f7f7;
+    transition: 0.4s;
+    position: relative;
+    z-index: 1;
 }
 
 .open #navOne {
@@ -59,6 +75,81 @@ nav {
     transform: translate(-100px, 130px)
 }
 
+.open #navSeven {
+    transform: rotate(90deg);
+    background-color: #E298BD;
+}
+
+.open #navEight {
+    transform: translate(-25px, 20px);
+    background-color: #E298BD;
+}
+
+.open #navNine {
+    transform: rotate(90deg) translate(40px, 50px);
+    background-color: #E298BD;
+}
+
+.open #navTen {
+    transform: translate(-75px, 60px);
+    background-color: #E298BD;
+}
+
+.open #navEleven {
+    transform: rotate(90deg) translate(80px, 100px);
+    background-color: #E298BD;
+}
+
+.open #navTwelve {
+    transform: translate(-125px, 100px);
+    background-color: #E298BD;
+}
+
 #hero {
     height: calc(100vh - 100px);
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+a {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+    display: none;
+    opacity: 0;
+    position:absolute;
+    padding: 18px 0;
+}
+
+a:nth-child(2) {
+    padding-right: 45px;
+    top: 220px;
+}
+
+a:nth-child(3) {
+    padding-right: 95px;
+    top: 280px;
+}
+
+.open a {
+    display: block;
+    animation: visible 0.4s forwards; 
+}
+
+@keyframes visible {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+h1 {
+    background-color: turquoise;
 }

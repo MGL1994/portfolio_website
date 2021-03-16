@@ -1,15 +1,17 @@
-const nav = document.querySelector('nav');
+const navigationGroup = document.querySelector('#navigationGroup');
 const navOne = document.querySelector('#navOne')
 const navTwo = document.querySelector('#navTwo')
 const navThree = document.querySelector('#navThree')
 
-nav.addEventListener('mouseenter', expandBurgerMenu);
-nav.addEventListener('mouseleave', collapseBurgerMenu);
+navigationGroup.addEventListener('mouseenter', expandBurgerMenu);
+navigationGroup.addEventListener('mouseleave', collapseBurgerMenu);
 
 function expandBurgerMenu(e) {
-    nav.classList.add('open')
+    navigationGroup.classList.add('open')
+    navigationGroup.classList.remove('close')
 }
 
 function collapseBurgerMenu(e) {
-    nav.classList.remove('open')
+    navigationGroup.classList.remove('open')
+    navigationGroup.classList.add('close')
 }
