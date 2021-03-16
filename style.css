@@ -156,7 +156,7 @@ h1, h2 {
 }
 
 #titleGroup {
-    margin: 60px 100px;
+    margin: 20px 100px;
 }
 
 h1 {
@@ -179,4 +179,20 @@ h2 {
 #titleUnderlineShadow {
     background-color: #70cdc3;
     margin-left: 20px;
+}
+
+#heroFooter {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 100px;
+}
+
+img {
+    height: 120px;
+    transform: rotate(180deg);
+}
+
+i {
+    font-size: 100px;
+    margin: 10px 20px;
 }
