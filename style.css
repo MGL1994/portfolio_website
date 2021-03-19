@@ -55,7 +55,7 @@ section {
 }
 
 .open #navTwo {
-    transform: translate(0, 50px)
+    transform: translate(0, 50px);
 }
 
 .open #navThree {
@@ -64,7 +64,7 @@ section {
 }
 
 .open #navFour {
-    transform: translate(-50px, 90px)
+    transform: translate(-50px, 90px);
 }
 
 .open #navFive {
@@ -73,37 +73,37 @@ section {
 }
 
 .open #navSix {
-    transform: translate(-100px, 130px)
+    transform: translate(-100px, 130px);
 }
 
 .open #navSeven {
     transform: rotate(90deg);
-    background-color: #E298BD;
+    background-color: #e298bd;
 }
 
 .open #navEight {
     transform: translate(-25px, 20px);
-    background-color: #E298BD;
+    background-color: #e298bd;
 }
 
 .open #navNine {
     transform: rotate(90deg) translate(40px, 50px);
-    background-color: #E298BD;
+    background-color: #e298bd;
 }
 
 .open #navTen {
     transform: translate(-75px, 60px);
-    background-color: #E298BD;
+    background-color: #e298bd;
 }
 
 .open #navEleven {
     transform: rotate(90deg) translate(80px, 100px);
-    background-color: #E298BD;
+    background-color: #e298bd;
 }
 
 .open #navTwelve {
     transform: translate(-125px, 100px);
-    background-color: #E298BD;
+    background-color: #e298bd;
 }
 
 #hero {
@@ -123,7 +123,7 @@ a {
     color: black;
     display: none;
     opacity: 0;
-    position:absolute;
+    position: absolute;
     padding: 18px 0;
 }
 
@@ -139,19 +139,20 @@ a:nth-child(3) {
 
 .open a {
     display: block;
-    animation: visible 0.4s forwards; 
+    animation: visible 0.4s forwards;
 }
 
 @keyframes visible {
     from {
-      opacity: 0;
+        opacity: 0;
     }
     to {
-      opacity: 1;
+        opacity: 1;
     }
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: 'Josefin Sans', sans-serif;
     margin: 20px 0;
 }
@@ -195,19 +196,19 @@ img {
 }
 
 .largeTriangleSolid {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-left: 60px solid transparent;
     border-right: 60px solid transparent;
     border-top: 90px solid #f7f7f7;
     position: absolute;
     top: 635px;
     transition: 0.4s;
-  }
+}
 
 .show div {
     top: 670px;
-    border-top: 90px solid #FEFA65
+    border-top: 90px solid #fefa65;
 }
 
 #socialsGroup {
@@ -249,17 +250,17 @@ i {
 .show#githubShadow {
     top: 600px;
     right: 450px;
-    background-color: #FB4337;
+    background-color: #fb4337;
 }
 
 .show#linkedinShadow {
     top: 600px;
     right: 320px;
-    background-color: #FB4337;
+    background-color: #fb4337;
 }
 
 .show#envelopeShadow {
     top: 600px;
     right: 190px;
-    background-color: #FB4337;
+    background-color: #fb4337;
 }
