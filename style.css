@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+body {
+    box-sizing: border-box;
+    background: url('./OMEGGK0.jpg') #70cdc3;
+    background-size: contain;
+    padding: 100px 100px 0 100px;
+}
+
+section {
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+}
+
+#navigationGroup {
+    align-self: flex-end;
+    margin: 60px;
+    display: flex;
+    cursor: pointer;
+}
+
+.even {
+    width: 60px;
+    height: 10px;
+    background-color: black;
+    transition: 0.4s;
+    position: relative;
+    z-index: 2;
+}
+
+.odd {
+    width: 10px;
+    height: 10px;
+    background-color: #f7f7f7;
+    margin-left: 50px;
+    transition: 0.4s;
+    position: relative;
+    z-index: 2;
+}
+
+.shadow {
+    width: 60px;
+    height: 10px;
+    background-color: #f7f7f7;
+    transition: 0.4s;
+    position: relative;
+    z-index: 1;
+}
+
+.open #navOne {
+    transform: translate(0, 35px) scaleY(6);
+    background-color: black;
+}
+
+.open #navTwo {
+    transform: translate(0, 50px)
+}
+
+.open #navThree {
+    transform: translate(-50px, 75px) scaleY(6);
+    background-color: black;
+}
+
+.open #navFour {
+    transform: translate(-50px, 90px)
+}
+
+.open #navFive {
+    transform: translate(-100px, 115px) scaleY(6);
+    background-color: black;
+}
+
+.open #navSix {
+    transform: translate(-100px, 130px)
+}
+
+.open #navSeven {
+    transform: rotate(90deg);
+    background-color: #E298BD;
+}
+
+.open #navEight {
+    transform: translate(-25px, 20px);
+    background-color: #E298BD;
+}
+
+.open #navNine {
+    transform: rotate(90deg) translate(40px, 50px);
+    background-color: #E298BD;
+}
+
+.open #navTen {
+    transform: translate(-75px, 60px);
+    background-color: #E298BD;
+}
+
+.open #navEleven {
+    transform: rotate(90deg) translate(80px, 100px);
+    background-color: #E298BD;
+}
+
+.open #navTwelve {
+    transform: translate(-125px, 100px);
+    background-color: #E298BD;
+}
+
+#hero {
+    height: calc(100vh - 100px);
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+a {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+    display: none;
+    opacity: 0;
+    position:absolute;
+    padding: 18px 0;
+}
+
+a:nth-child(2) {
+    padding-right: 45px;
+    top: 220px;
+}
+
+a:nth-child(3) {
+    padding-right: 95px;
+    top: 280px;
+}
+
+.open a {
+    display: block;
+    animation: visible 0.4s forwards; 
+}
+
+@keyframes visible {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+h1, h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 20px 0;
+}
+
+#titleGroup {
+    margin: 20px 100px;
+}
+
+h1 {
+    font-size: 72px;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+#titleGroup div {
+    height: 20px;
+}
+
+#titleUnderline {
+    margin-right: 20px;
+    background-color: black;
+}
+
+#titleUnderlineShadow {
+    background-color: #70cdc3;
+    margin-left: 20px;
+}
+
+#heroFooter {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 100px;
+}
+
+img {
+    height: 120px;
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+
+.largeTriangleSolid {
+    width: 0; 
+    height: 0; 
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-top: 90px solid #f7f7f7;
+    position: absolute;
+    top: 635px;
+    transition: 0.4s;
+  }
+
+.show div {
+    top: 670px;
+    border-top: 90px solid #FEFA65
+}
+
+#socialsGroup {
+    display: flex;
+    align-items: center;
+}
+
+i {
+    font-size: 100px;
+    margin: 10px 20px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#socialsGroup div {
+    height: 88px;
+    width: 88px;
+    background-color: #f7f7f7;
+    position: absolute;
+    z-index: 1;
+    transition: 0.4s;
+}
+
+#githubShadow {
+    top: 635px;
+    right: 475px;
+}
+
+#linkedinShadow {
+    top: 635px;
+    right: 347px;
+}
+
+#envelopeShadow {
+    top: 635px;
+    right: 220px;
+}
+
+.show#githubShadow {
+    top: 600px;
+    right: 450px;
+    background-color: #FB4337;
+}
+
+.show#linkedinShadow {
+    top: 600px;
+    right: 320px;
+    background-color: #FB4337;
+}
+
+.show#envelopeShadow {
+    top: 600px;
+    right: 190px;
+    background-color: #FB4337;
+}
