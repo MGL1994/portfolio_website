@@ -4,10 +4,13 @@ const navTwo = document.querySelector('#navTwo');
 const navThree = document.querySelector('#navThree');
 
 const triangleContainer = document.querySelector('#triangleContainer');
-const largeTriangleHollow = document.querySelector('#largeTriangleHollow');
+const largeTriangleHollow = document.querySelector('.largeTriangle');
 const largeTriangleSolid = document.querySelector('#largeTriangleSolid');
 
 const socialLogos = document.querySelectorAll('i');
+
+const skills = document.querySelectorAll('li');
+const languagesSkillsGroup = document.querySelector('#languagesSkillsGroup');
 
 navigationGroup.addEventListener('mouseenter', expandBurgerMenu);
 navigationGroup.addEventListener('mouseleave', collapseBurgerMenu);
@@ -19,6 +22,13 @@ socialLogos.forEach((logo) => {
     logo.addEventListener('mouseenter', showLogoShadow);
     logo.addEventListener('mouseleave', hideLogoShadow);
     logo.addEventListener('click', openLink);
+});
+
+window.addEventListener('scroll', showCircleShadow);
+
+skills.forEach((skill) => {
+    skill.addEventListener('mouseenter', showSkills);
+    skill.addEventListener('mouseleave', hideSkills);
 });
 
 function expandBurgerMenu(e) {
@@ -64,4 +74,30 @@ function openLink(e) {
         case 'envelope':
             window.open('mailto:michaelgl1994@gmail.com');
     }
+}
+
+function showCircleShadow() {
+    if (window.scrollY >= 700) {
+        document.querySelector('.largeCircleShadow').classList.add('show');
+    }
+}
+
+function showSkills(e) {
+    const selectedSkills = e.target;
+    const smallTriangleShadow = selectedSkills.firstElementChild;
+    const selectedSkillsGroup = document.querySelector(
+        `#${selectedSkills.id}SkillsGroup`
+    );
+    selectedSkillsGroup.classList.add('show');
+    smallTriangleShadow.classList.add('show');
+}
+
+function hideSkills(e) {
+    const selectedSkills = e.target;
+    const smallTriangleShadow = selectedSkills.firstElementChild;
+    const selectedSkillsGroup = document.querySelector(
+        `#${selectedSkills.id}SkillsGroup`
+    );
+    selectedSkillsGroup.classList.remove('show');
+    smallTriangleShadow.classList.remove('show');
 }
