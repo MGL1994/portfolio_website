@@ -312,13 +312,34 @@ i {
 .largeCircleShadow {
     height: 75px;
     width: 75px;
-    background-color: #1865b5;
-    border: 10px solid #1865b5;
+    background-color: #f7f7f7;
+    border: 10px solid #f7f7f7;
     border-radius: 75px;
     margin: 0;
     position: absolute;
-    top: 945px;
-    left: 230px;
+    top: 920px;
+    left: 205px;
+}
+
+.show.largeCircleShadow {
+    animation: reveal 0.8s forwards;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes reveal {
+    from {
+        top: 920px;
+        left: 205px;
+        background-color: #f7f7f7;
+        border: 10px solid #f7f7f7;
+    }
+    to {
+        top: 945px;
+        left: 230px;
+        background-color: #1865b5;
+        border: 10px solid #1865b5;
+    }
 }
 
 h3 {

@@ -24,6 +24,8 @@ socialLogos.forEach((logo) => {
     logo.addEventListener('click', openLink);
 });
 
+window.addEventListener('scroll', showCircleShadow);
+
 skills.forEach((skill) => {
     skill.addEventListener('mouseenter', showSkills);
     skill.addEventListener('mouseleave', hideSkills);
@@ -71,6 +73,12 @@ function openLink(e) {
             break;
         case 'envelope':
             window.open('mailto:michaelgl1994@gmail.com');
+    }
+}
+
+function showCircleShadow() {
+    if (window.scrollY >= 700) {
+        document.querySelector('.largeCircleShadow').classList.add('show');
     }
 }
 
