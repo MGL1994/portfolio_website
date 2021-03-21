@@ -80,7 +80,7 @@ function showSkills(e) {
     const selectedSkillsGroup = document.querySelector(
         `#${selectedSkills.id}SkillsGroup`
     );
-    selectedSkillsGroup.style.display = 'block';
+    selectedSkillsGroup.classList.add('show');
     smallTriangleShadow.classList.add('show');
 }
 
@@ -90,6 +90,6 @@ function hideSkills(e) {
     const selectedSkillsGroup = document.querySelector(
         `#${selectedSkills.id}SkillsGroup`
     );
-    selectedSkillsGroup.style.display = 'none';
+    selectedSkillsGroup.classList.remove('show');
     smallTriangleShadow.classList.remove('show');
 }

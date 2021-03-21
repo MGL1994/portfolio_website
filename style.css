@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     box-sizing: border-box;
     background: url('./OMEGGK0.jpg') #70cdc3;
@@ -143,7 +147,7 @@ a:nth-child(3) {
 
 .open a {
     display: block;
-    animation: visible 0.4s forwards;
+    animation: visible 0.8s forwards;
 }
 
 @keyframes visible {
@@ -376,7 +380,7 @@ li {
     display: flex;
 }
 
-#skillsGroupTitle {
+#skillsTitleGroup {
     cursor: pointer;
 }
 
@@ -389,5 +393,9 @@ li {
 
 .skillsSubGroup {
     display: none;
-    transition: 0.4s;
+}
+
+.show.skillsSubGroup {
+    display: block;
+    animation: visible 0.8s forwards;
 }
