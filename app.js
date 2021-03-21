@@ -4,10 +4,12 @@ const navTwo = document.querySelector('#navTwo');
 const navThree = document.querySelector('#navThree');
 
 const triangleContainer = document.querySelector('#triangleContainer');
-const largeTriangleHollow = document.querySelector('#largeTriangleHollow');
+const largeTriangleHollow = document.querySelector('.largeTriangle');
 const largeTriangleSolid = document.querySelector('#largeTriangleSolid');
 
 const socialLogos = document.querySelectorAll('i');
+
+const skills = document.querySelectorAll('li');
 
 navigationGroup.addEventListener('mouseenter', expandBurgerMenu);
 navigationGroup.addEventListener('mouseleave', collapseBurgerMenu);
@@ -19,6 +21,11 @@ socialLogos.forEach((logo) => {
     logo.addEventListener('mouseenter', showLogoShadow);
     logo.addEventListener('mouseleave', hideLogoShadow);
     logo.addEventListener('click', openLink);
+});
+
+skills.forEach((skill) => {
+    skill.addEventListener('mouseenter', showSkills);
+    skill.addEventListener('mouseleave', hideSkills);
 });
 
 function expandBurgerMenu(e) {
@@ -64,4 +71,14 @@ function openLink(e) {
         case 'envelope':
             window.open('mailto:michaelgl1994@gmail.com');
     }
+}
+
+function showSkills(e) {
+    const smallTriangleShadow = e.target.firstElementChild;
+    smallTriangleShadow.classList.add('show');
+}
+
+function hideSkills(e) {
+    const smallTriangleShadow = e.target.firstElementChild;
+    smallTriangleShadow.classList.remove('show');
 }
