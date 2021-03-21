@@ -10,6 +10,7 @@ const largeTriangleSolid = document.querySelector('#largeTriangleSolid');
 const socialLogos = document.querySelectorAll('i');
 
 const skills = document.querySelectorAll('li');
+const languagesSkillsGroup = document.querySelector('#languagesSkillsGroup');
 
 navigationGroup.addEventListener('mouseenter', expandBurgerMenu);
 navigationGroup.addEventListener('mouseleave', collapseBurgerMenu);
@@ -74,11 +75,21 @@ function openLink(e) {
 }
 
 function showSkills(e) {
-    const smallTriangleShadow = e.target.firstElementChild;
+    const selectedSkills = e.target;
+    const smallTriangleShadow = selectedSkills.firstElementChild;
+    const selectedSkillsGroup = document.querySelector(
+        `#${selectedSkills.id}SkillsGroup`
+    );
+    selectedSkillsGroup.style.display = 'block';
     smallTriangleShadow.classList.add('show');
 }
 
 function hideSkills(e) {
-    const smallTriangleShadow = e.target.firstElementChild;
+    const selectedSkills = e.target;
+    const smallTriangleShadow = selectedSkills.firstElementChild;
+    const selectedSkillsGroup = document.querySelector(
+        `#${selectedSkills.id}SkillsGroup`
+    );
+    selectedSkillsGroup.style.display = 'none';
     smallTriangleShadow.classList.remove('show');
 }

@@ -307,8 +307,7 @@ i {
     margin-left: 100px;
 }
 
-p,
-li {
+p {
     margin: 25px 0;
 }
 
@@ -353,5 +352,24 @@ h4 {
 li {
     display: flex;
     flex-direction: row;
+}
+
+#skillsGroup {
+    display: flex;
+}
+
+#skillsGroupTitle {
     cursor: pointer;
+}
+
+.skillsSubGroup ul {
+    display: flex;
+    max-height: 300px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.skillsSubGroup {
+    display: none;
+    transition: 0.4s;
 }
